@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.foo {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 4em;
+    background: red;
+}
+
+:root.s-hover .foo:hover {
+    background: green;
+}

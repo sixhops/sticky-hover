@@ -1,0 +1,21 @@
+/// Gate for hover and touch events. Only allows them if the root element has the correct class.
+/// @at-root allows us to emit styles at the root level instead of where we are nested.
+@mixin supports($prefix) {
+    @at-root {
+        :root.#{$prefix} #{&} {
+            @content;
+        }
+    }
+}
+
+@mixin supports-hover() {
+    @include supports('s-hover') {
+        @content;
+    }
+}
+
+@mixin supports-touch() {
+    @include supports('s-touch') {
+        @content;
+    }
+}
